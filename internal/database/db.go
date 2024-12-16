@@ -10,7 +10,7 @@ import (
 
 const dbFile = "blocked_domains.db"
 
-func initDB() (*sql.DB, error) {
+func InitDB() (*sql.DB, error) {
 	db, err := sql.Open("sqlite3", dbFile)
 	if err != nil {
 		return nil, fmt.Errorf("failed to open SQLite database: %v", err)
@@ -52,20 +52,21 @@ func RemoveBlockedDomain(db *sql.DB, domain string) error {
 }
 
 // retrieves all blocked domains from the database
-func GetBlockedDomains(db *sql.DB) ([]string, error) {
+func GetBlockedDomains(db *sql.DB) (map[string]struct{}, error) {
 	rows, err := db.Query("SELECT domain FROM blocked_domains;")
 	if err != nil {
 		return nil, fmt.Errorf("failed to query blocked domains: %v", err)
 	}
 	defer rows.Close()
 
-	var domains []string
+	domains := make(map[string]struct{})
+
 	for rows.Next() {
 		var domain string
 		if err := rows.Scan(&domain); err != nil {
-			return nil, fmt.Errorf("failed to scan domain: %v", err)
+			return nil, fmt.Errorf("failed to fetch a blocked domain: %v", err)
 		}
-		domains = append(domains, domain)
+		domains[domain] = struct{}{}
 	}
 
 	return domains, nil
