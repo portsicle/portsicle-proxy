@@ -8,7 +8,6 @@ import (
 // proxy configuration
 type Config struct {
 	ListenAddr string
-	BlockedIPs []string // future scope
 }
 
 // proxy server
@@ -42,8 +41,6 @@ func (p *Proxy) Start() error {
 	}
 
 	p.httpServer = server
-	log.Printf("Attempting to start proxy server on %s", p.config.ListenAddr)
-
 	return server.ListenAndServe()
 }
 

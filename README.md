@@ -1,41 +1,48 @@
-## Attorney Proxy Server
+## Attorney Proxy Server and Toolkit
 
 Attorney is a lightweight and flexible HTTP/HTTPS forward proxy server implemented in Go.
 
-This project serves as a learning tool for understanding the intricacies of proxy servers and the HTTP CONNECT method.
+The Toolkit builds on top of the core Attorney server to provide additional features to enhance its functionality.
 
-## Installation
+#### Upcoming features :
 
-Clone the repository:
+- Site Access Management.
+- Offline Browsing Mode.
+- Ad / Content Blocker.
 
-```
-git clone https://github.com/amitsuthar69/attorney.git
-cd attorney
-```
+## Installation guide
 
-Install **Air** for live reload:
+1. Install the provided binary.
 
-```
-go install github.com/air-verse/air@latest
-```
+> recommended to use latest release
 
-### Run the server:
+2. Use the CLI to run the server locally:
 
-```
-air
+```zsh
+attorney-toolkit run -p 8888
 ```
 
-or
+3. Use help to know more:
 
 ```
-go build main.go
-./main
+attorney-toolkit --help
+
+Allows HTTP/HTTPS transparent proxying on your machine.
+
+Usage:
+  attorney-toolkit [command]
+
+Available Commands:
+  help        Help about any command
+  run         Runs the proxy server
+
+Use "attorney-toolkit [command] --help" for more information about a command.
 ```
 
 ## Usage
 
 1. Run the source code or build.
-2. Add `http://127.0.0.1` on port `:8888` on your system's proxy configuration for both HTTP and HTTPS Proxy.
+2. Add `http://127.0.0.1` and the port specified on your system's proxy configuration for both HTTP and HTTPS Proxy.
 3. Make sure `127.0.0.1` is not listed in your machine's Ignored Hosts list.
 
 ## How It Works
