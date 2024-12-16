@@ -30,8 +30,11 @@ func (p *Proxy) Start() error {
 	server := &http.Server{
 		Addr: p.config.ListenAddr,
 		Handler: http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-			log.Printf("Incoming request: Method=%s, Host=%s, URL=%s",
-				r.Method, r.Host, r.URL)
+			// header obfuscation before processing the request
+			obfuscateHeaders(r)
+
+			log.Printf("Incoming request: Method=%s, Host=%s, URL=%s Headers=%s",
+				r.Method, r.Host, r.URL, r.Header)
 
 			db, err := database.InitDB()
 			if err != nil {
