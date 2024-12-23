@@ -8,7 +8,7 @@ The Toolkit builds on top of the core Portsicle server to provide additional fea
 
 1. Install the provided binary from latest release.
 
-2. Give executeable permission to the binary `chmod +x ./attonery-toolkit`.
+2. Give executeable permission to the binary `chmod +x ./portsicle-proxy`.
 
 3. Use the CLI to run the server locally:
 
