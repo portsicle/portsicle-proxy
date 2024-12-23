@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/amitsuthar69/attorney-toolkit/cmd"
+	"github.com/amitsuthar69/portsicle-proxy/cmd"
 	_ "github.com/joho/godotenv/autoload"
 )
 

@@ -1,4 +1,4 @@
-APP_NAME = attorney-toolkit
+APP_NAME = portsicle-proxy
 PKG_DIRS = ./cmd ./internal
 OUTPUT_DIR = ./bin
 GO_FILES = $(shell find $(PKG_DIRS) -type f -name '*.go')

@@ -4,7 +4,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/amitsuthar69/attorney-toolkit/internal/database"
+	"github.com/amitsuthar69/portsicle-proxy/internal/database"
 	"github.com/spf13/cobra"
 )
 

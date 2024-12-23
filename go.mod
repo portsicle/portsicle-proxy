@@ -1,4 +1,4 @@
-module github.com/amitsuthar69/attorney-toolkit
+module github.com/amitsuthar69/portsicle-proxy
 
 go 1.23.4
 

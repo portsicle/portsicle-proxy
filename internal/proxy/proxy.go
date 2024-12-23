@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/amitsuthar69/attorney-toolkit/internal/database"
+	"github.com/amitsuthar69/portsicle-proxy/internal/database"
 )
 
 // proxy configuration

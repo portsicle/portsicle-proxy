@@ -3,7 +3,7 @@ package cmd
 import (
 	"log"
 
-	"github.com/amitsuthar69/attorney-toolkit/internal/proxy"
+	"github.com/amitsuthar69/portsicle-proxy/internal/proxy"
 	"github.com/spf13/cobra"
 )
 

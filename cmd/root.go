@@ -8,8 +8,8 @@ import (
 
 // base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "attorney-toolkit",
-	Short: "Attorney is a lightweight forward proxy written in Go",
+	Use:   "portsicle-proxy",
+	Short: "Portsicle Proxy is a lightweight forward proxy written in Go",
 	Long:  `Allows HTTP/HTTPS transparent proxying on your machine.`,
 }
 

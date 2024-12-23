@@ -1,8 +1,8 @@
-## Attorney Proxy Server and Toolkit
+## Portsicle Proxy Server and Toolkit
 
-Attorney is a lightweight and flexible HTTP/HTTPS forward proxy server implemented in Go.
+Portsicle is a lightweight and flexible HTTP/HTTPS forward proxy server implemented in Go.
 
-The Toolkit builds on top of the core Attorney server to provide additional features to enhance its functionality.
+The Toolkit builds on top of the core Portsicle server to provide additional features to enhance its functionality.
 
 ## Installation guide
 
@@ -13,24 +13,24 @@ The Toolkit builds on top of the core Attorney server to provide additional feat
 3. Use the CLI to run the server locally:
 
 ```zsh
-attorney-toolkit run -p 8888
+portsicle-proxy run -p 8888
 ```
 
 4. Use help to know more:
 
 ```
-attorney-toolkit --help
+portsicle-proxy --help
 
 Allows HTTP/HTTPS transparent proxying on your machine.
 
 Usage:
-  attorney-toolkit [command]
+  portsicle-proxy [command]
 
 Available Commands:
   help        Help about any command
   run         Runs the proxy server
 
-Use "attorney-toolkit [command] --help" for more information about a command.
+Use "portsicle-proxy [command] --help" for more information about a command.
 ```
 
 ## Usage
@@ -52,19 +52,19 @@ Use "attorney-toolkit [command] --help" for more information about a command.
   1. Add a site to blocklist:
 
   ```
-  attorney-toolkit block --add https://example.com
+  portsicle-proxy block --add https://example.com
   # or
-  attorney-toolkit block --add someexample.com
+  portsicle-proxy block --add someexample.com
   # or
-  attorney-toolkit block -a other.example.com
+  portsicle-proxy block -a other.example.com
   ```
 
   2. Remove a site from blocklist:
 
   ```
-  attorney-toolkit block --remove https://example.com
+  portsicle-proxy block --remove https://example.com
   # or
-  attorney-toolkit block -r someexample.com
+  portsicle-proxy block -r someexample.com
   ```
 
 ---
