@@ -33,8 +33,8 @@ func (p *Proxy) Start() error {
 			// header obfuscation before processing the request
 			obfuscateHeaders(r)
 
-			log.Printf("Incoming request: Method=%s, Host=%s, URL=%s Headers=%s",
-				r.Method, r.Host, r.URL, r.Header)
+			log.Printf("Incoming request: Method=%s, Host=%s, URL=%s",
+				r.Method, r.Host, r.URL)
 
 			db, err := database.InitDB()
 			if err != nil {
