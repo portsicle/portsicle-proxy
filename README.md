@@ -71,8 +71,7 @@ Use "portsicle-proxy [command] --help" for more information about a command.
 
 ### Future Scope:
 
-- Ad / Content Blocker.
-- Offline Browsing Mode.
+- Caching and Offline Browsing Mode.
 
 ## How It Works
 
